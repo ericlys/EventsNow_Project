@@ -1,0 +1,196 @@
+body{
+    font-family: Arial;
+    background: #3498db;
+}
+.login {
+    background: #ffffff;
+    padding: 40px;
+    width: 240px;
+    margin: auto;
+    margin-top:50px;
+    height: 300px;
+}
+
+.register{
+    background: #ffffff;
+    padding: 40px;
+    width: 240px;
+    margin: auto;
+    margin-top:50px;
+    height: 510px;
+}
+
+
+
+
+input{
+    width: 240px;
+    text-align: center;
+    background: #ecf0f1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    transition: border .5s;
+}
+
+input[type = submit]{
+    border: 2px solid transparent;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+    padding:  10px 0;
+    border-radius: 3px;
+}
+input[type=submit]:hover{
+    background: #2980b9;
+}
+form h2{
+    color:gray;
+}
+
+/*pag- home*/
+#container{
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    margin-top:10px;
+    background: white;
+
+}
+#map{
+    width: 80%;
+    height: 100%;
+    float: left;
+    z-index: 1;
+}
+
+#right{
+   width: 20%;
+    height: 100%;
+    float: left;
+}
+
+#right input{
+    margin-top: 10px;
+}
+
+#eventRegistration{
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-left: 30px;
+    text-align-all: initial;
+}
+
+#searchAdd {
+    width: 740px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+}
+
+#searchAdd{
+    width: 67%;
+    height: 100%;
+    float: left;
+    text-align: justify;
+    font-family: Arial;
+
+}
+
+#title2{
+    margin-top: 70px;
+    margin-left: 10%;
+    color: white;
+}
+
+#mapa {
+    border: 10px solid #ccc;
+    width: 65%;
+    height: 85%;
+    margin-top: 5px;
+}
+
+#mapa3 {
+    border: 10px solid #ccc;
+    width: 97%;
+    height: 80%;
+}
+
+
+.searchAdd label {
+    background: #333333;
+    border-radius: 6px 0 0 6px;
+    color: #f0f0f0;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    float: left;
+    font: 15px 'Open Sans',Arial;
+    padding: 7px 13px;
+    width: 70px;
+    margin-top: 10px;
+}
+
+.searchAdd input[type="text"] {
+    background: #FFF;
+    color: #666;
+    display: block;
+    float: left;
+    font: 15px 'Open Sans',Arial;
+    height: 34px;
+    padding: 9px;
+    width: 475px;
+    text-align: initial;
+    margin-top: 10px;
+}
+
+.searchAdd input[type="button"] {
+    background: #2679A5;
+    border-radius: 0 6px 6px 0;
+    color: #FFF;
+    cursor: pointer;
+    height: 34px;
+    font: 15px 'Open Sans',Arial;
+    padding: 2px 13px 6px;
+    width: 150px;
+    margin-top: 10px;
+
+    -webkit-transition: background .2s ease-in;
+    -moz-transition: background .2s ease-in;
+    -ms-transition: background .2s ease-in;
+    -o-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+}
+
+.searchAdd input[type="button"]:hover { background: #12587C }
+
+
+/* =============== Estilos do autocomplete =============== */
+.ui-autocomplete {
+    background: #fff;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+    font: 15px 'Open Sans',Arial;
+    margin-left: 3px;
+    width: 493px !important;
+    position: fixed;
+}
+
+.ui-autocomplete .ui-menu-item {
+    list-style: none outside none;
+    padding: 7px 0 9px 10px;
+}
+
+.ui-autocomplete .ui-menu-item:hover { background: #eee }
+
+.ui-autocomplete .ui-corner-all {
+    color: #666 !important;
+    display: block;
+}
+
+
+
+

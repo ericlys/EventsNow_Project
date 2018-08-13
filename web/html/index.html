@@ -1,0 +1,43 @@
+<html >
+<head>
+    <meta content="text/javascript" charset="UTF-8">
+    <title>New Event</title>
+    <link href="/css/style1.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/mapa.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBY1Fb5yos4HOJ9NOmHlwbA8e6cbusEGzI&sensor=false"></script>
+
+</head>
+<body>
+        <h2 id="title2">Cadastrar evento</h2>
+        <form method="post" action="/registerEvent">
+            <div id="container">
+                <div id="eventRegistration">
+                    <h2>Novo Evento</h2><br>
+                    <input type="text" name="title" id="title" placeholder="Título"><br><br>
+                    <input type="date" name="StartDate" id="StartDate"> <br><br>
+                    <input type="date" name="FinalDate" id="FinalDate"> <br><br>
+                    <select name="theme" >
+                        <option value="Construção">Construção civil</option>
+                        <option value="Informática">Informática</option>
+                        <option value="Automação">Automação</option>
+                        <option value="Linguagens">Linguagens</option>
+                        <option value="Humanidades">Humanidades</option>
+                        <option value="Diversos">Diversos</option>
+                    </select><br><br>
+                    <input type="submit" value="Enviar" name="btnEnviar">
+                    <em>{0}</em>
+                </div>
+                <div class="searchAdd">
+                    <label for="txtEndereco">Endereço:</label>
+                    <input type="text" id="txtEndereco" name="txtEndereco"/>
+                    <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa"/>
+                    <div id="mapa"></div>
+                    <input type="hidden" id="txtLatitude" name="txtLatitude">
+                    <input type="hidden" id="txtLongitude" name="txtLongitude">
+                </div>
+            </div>
+        </form>
+</body>
+</html>
