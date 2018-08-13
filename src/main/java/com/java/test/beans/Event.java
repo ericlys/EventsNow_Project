@@ -103,4 +103,5 @@ public class Event {
                 ", userMail='" + userMail + '\'' +
                 '}';
     }
+
 }

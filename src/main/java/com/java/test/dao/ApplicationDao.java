@@ -4,6 +4,7 @@ import com.java.test.beans.Event;
 import com.java.test.beans.User;
 
 import java.sql.*;
+import java.util.List;
 
 public class ApplicationDao {
 
@@ -108,4 +109,36 @@ public class ApplicationDao {
 
         return rowAffected;
     }
+
+    public List<Event> getEvents(){
+        List<Event> listE = null;
+        Event event = null;
+        try {
+            Connection connection = DBConnection.getConnectionToDatabase ();
+
+            String sql = " select * from events";
+            PreparedStatement statement = connection.prepareStatement (sql);
+            ResultSet set = statement.executeQuery ();
+
+            while(set.next ()){
+                event = new Event ();
+                event.setTitle (set.getString ("title"));
+                event.setStartDate (set.getDate ("startdate"));
+                event.setFinalDate (set.getDate ("finaldate"));
+                event.setTheme (set.getString ("theme"));
+                event.setLatitude (set.getFloat ("latitude"));
+                event.setLongitude (set.getFloat ("longitude"));
+                event.setAddress (set.getString ("address"));
+                event.setUserMail (set.getString ("mail_user"));
+                listE.add (event);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace ( );
+        }
+        return listE;
+
+    }
+
+
 }

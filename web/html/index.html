@@ -10,15 +10,24 @@
 
 </head>
 <body>
+<header id="home" class="header">
+    <ul class="navbar">
+        <li><a href='/home'>Home</a></li>
+        <li><a href='/logout'>logout</a></li>
+    </ul>
+</header>
+
         <h2 id="title2">Cadastrar evento</h2>
         <form method="post" action="/registerEvent">
             <div id="container">
                 <div id="eventRegistration">
                     <h2>Novo Evento</h2><br>
                     <input type="text" name="title" id="title" placeholder="Título"><br><br>
+                    Data de início:<br>
                     <input type="date" name="StartDate" id="StartDate"> <br><br>
+                    Data de término:<br>
                     <input type="date" name="FinalDate" id="FinalDate"> <br><br>
-                    <select name="theme" >
+                    <select name="theme" id="theme">
                         <option value="Construção">Construção civil</option>
                         <option value="Informática">Informática</option>
                         <option value="Automação">Automação</option>
@@ -26,7 +35,7 @@
                         <option value="Humanidades">Humanidades</option>
                         <option value="Diversos">Diversos</option>
                     </select><br><br>
-                    <input type="submit" value="Enviar" name="btnEnviar">
+                    <input type="submit" value="Enviar" name="btnEnviar"><br>
                     <em>{0}</em>
                 </div>
                 <div class="searchAdd">

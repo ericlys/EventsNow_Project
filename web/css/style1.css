@@ -100,6 +100,11 @@ form h2{
 
 }
 
+#theme{
+    width: 150px;
+    height: 50px;
+}
+
 #title2{
     margin-top: 70px;
     margin-left: 10%;
@@ -171,6 +176,7 @@ form h2{
 /* =============== Estilos do autocomplete =============== */
 .ui-autocomplete {
     background: #fff;
+    color: #333333;
     border-top: 1px solid #ccc;
     cursor: pointer;
     font: 15px 'Open Sans',Arial;
@@ -191,6 +197,46 @@ form h2{
     display: block;
 }
 
+/*==========*/
+.navbar {
+    margin-left: 80%;
+    line-height: 120%;
+    list-style-type: none;
+    height: 0%;
+}
 
+.navbar li {
+    margin-top: 10%;
+    text-decoration: none;
+    transition: 1s ease-out;
+    padding: 0px 5px;
+    display: inline-block
 
+}
+
+.navbar a{
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+
+}
+
+.navbar a:after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0;
+    margin: 0 .5rem;
+    -webkit-transition: width .3s ease-out, background-color .3s ease-out;
+    transition: width .3s ease-out, background-color .3s ease-out
+}
+
+.navbar a:hover {
+    color: #f3d350
+}
+
+.navbar a:hover:after {
+    width: 100%;
+    background: #f3d350
+}
 

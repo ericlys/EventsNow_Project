@@ -17,18 +17,18 @@ public class loginServlet extends HttpServlet {
         String umail = req.getParameter ("email");
         String pass = req.getParameter ("password");
 
-        ApplicationDao dao = new ApplicationDao ();
-        boolean isValid = dao.validateUser (umail, pass);
 
-        if(isValid){
+            ApplicationDao dao = new ApplicationDao ( );
+            boolean isValid = dao.validateUser (umail, pass);
+
+         if(isValid && umail!=""){
             HttpSession session = req.getSession ();
 
             session.setAttribute ("usermail", umail);
-            System.out.println ("entrou" );
 
             req.getRequestDispatcher ("html/home.jsp").forward (req, resp);
 
-    }else {
+          }else {
             String errorMessage = "Credenciais inválidas, tente logar novamente!";
             req.setAttribute ("error", errorMessage);
             req.getRequestDispatcher ("html/login.jsp").forward (req, resp);

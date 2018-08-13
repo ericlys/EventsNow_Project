@@ -10,6 +10,8 @@
 <script src="js/mapa2.js"></script>
 
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+
     <h2 id="title2">Eventos Próximos a mim</h2>
     <div id="container">
         <div id="map"></div>
