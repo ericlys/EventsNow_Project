@@ -110,15 +110,15 @@ public class ApplicationDao {
         return rowAffected;
     }
 
-    public List<Event> getEvents(){
+    public List<Event> getEvents( ){
         List<Event> listE = null;
         Event event = null;
         try {
             Connection connection = DBConnection.getConnectionToDatabase ();
-
+           // String sql = " select * from events where theme like '%"+searchString+"%'";
             String sql = " select * from events";
-            PreparedStatement statement = connection.prepareStatement (sql);
-            ResultSet set = statement.executeQuery ();
+            Statement statement = connection.createStatement ();
+            ResultSet set = statement.executeQuery (sql);
 
             while(set.next ()){
                 event = new Event ();

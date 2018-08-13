@@ -18,7 +18,7 @@
 
         <div id="right">
             <form>
-            <input type="submit" value="Criar Eventos" formmethod="get" formaction="html/index.html"><br>
+            <input type="submit" value="Criar Eventos" formmethod="get" formaction="/html/index.html"><br>
             <input type="submit" value="Buscar eventos" formmethod="post" formaction="searchEvents" >
             </form>
         </div>

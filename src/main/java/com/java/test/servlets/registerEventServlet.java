@@ -21,26 +21,28 @@ public class registerEventServlet extends HttpServlet {
 
         String eventTitle = req.getParameter ("title");
         Date eventStartDate = Date.valueOf (req.getParameter ("StartDate"));
-        Date eventFinalDate = Date.valueOf(req.getParameter ("FinalDate"));
+        Date eventFinalDate = Date.valueOf (req.getParameter ("FinalDate"));
         String eventTheme = req.getParameter ("theme");
         Float eventLatitude = Float.valueOf (req.getParameter ("txtLatitude"));
-        Float eventLongitude = Float.valueOf(req.getParameter ("txtLongitude"));
+        Float eventLongitude = Float.valueOf (req.getParameter ("txtLongitude"));
         String eventAddress = req.getParameter ("txtEndereco");
-        String userMail = (String) req.getSession ().getAttribute ("usermail");
+        String userMail = (String) req.getSession ( ).getAttribute ("usermail");
 
-        Event event = new Event (eventTitle, eventStartDate, eventFinalDate, eventTheme, eventLatitude, eventLongitude, eventAddress,userMail);
+        Event event = new Event (eventTitle, eventStartDate, eventFinalDate, eventTheme, eventLatitude, eventLongitude, eventAddress, userMail);
 
-        System.out.println (event.toString () );
+        System.out.println (event.toString ( ));
 
         String infoMessage = null;
 
-        ApplicationDao applicationDao = new ApplicationDao ();
+        ApplicationDao applicationDao = new ApplicationDao ( );
         int rows = applicationDao.registerEvent (event);
 
-        if (rows == 0) {
-            infoMessage = "Desculpe, um erro correu!, ou o evento já esta cadastrado";
-        } else {
+
+        if (rows != 0) {
             infoMessage = "Evento registrado com sucesso!";
+
+        } else {
+            infoMessage = "Desculpe, um erro correu!, ou o evento já esta cadastrado";
         }
 
         String page = getHTMLString (req.getServletContext ( ).getRealPath ("html/index.html"), infoMessage);
